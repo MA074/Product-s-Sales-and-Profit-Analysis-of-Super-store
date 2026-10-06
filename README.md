@@ -223,13 +223,3 @@ This dashboard can be used to answer questions such as:
 | **Superstore Dataset** | Source data |
 | **GitHub** | Project version control and portfolio hosting |
 
----
-
-## 📁 Repository Structure
-
-```text
-Product-s-Sales-and-Profit-Analysis-of-Super-store/
-│
-├── Product-s-Sales-and-Profit-Analysis-of-Super-store.pbix
-├── superstore.png
-└── README.md
