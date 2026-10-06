@@ -1,89 +1,235 @@
-# 📊 Product Sales & Profit Analysis — Superstore (Power BI)
+# 📊 Product's Sales and Profit Analysis of Superstore
 
-A Power BI dashboard that analyzes 2017–2020 retail sales performance, identifies underperforming regions, and uncovers profit margin trends across product categories.
+An interactive **Power BI dashboard** designed to analyze retail sales and profitability performance across products, categories, years, and U.S. states using the Superstore dataset.
 
-![Dashboard Preview](superstore.png)
-
----
-
-## 🎯 Project Overview
-
-**Business Objective**  
-To evaluate sales and profit dynamics in a retail superstore from 2017 to 2020, pinpoint categories and states driving profitability (or losses), and support data-driven decisions on pricing, discounts, and regional focus.
-
-**Data Source**  
-- **Dataset**: Superstore retail transactions (Excel)  
-- **Volume**: ~10,000 transaction logs  
-- **Timeframe**: 2017–2020  
-- **Key Fields**: Order Date, Category, Sub-Category, Sales, Profit, Discount, State, Quantity  
-
-**Tools Used**  
-- Microsoft Power BI Desktop (.pbix)  
-- Excel (source data)  
+The dashboard provides a consolidated view of **sales, profit, discount, product performance, and geographical profitability**, helping identify areas of strong performance as well as products and regions contributing disproportionately to low profits.
 
 ---
 
-## 📈 Key Features & Visualizations
+## 📊 Dashboard Preview
 
-The workbook includes interactive visuals designed to support drill-down analysis and executive summaries.
-
-| Visual | Purpose | Key Design Choices |
-|--------|---------|--------------------|
-| **Bar Chart: Sales by Category** | Compare total sales across product categories (e.g., Furniture, Office Supplies, Technology) | Sorted descending for quick identification of top revenue drivers |
-| **Line Graph: Profit vs Sales by Year** | Track year-over-year trends in sales and profit | Dual-line format to highlight divergence (e.g., 2018 profit dip) |
-| **Bubble Chart: Profit & Discount over Sales** | Analyze how discount levels correlate with profit performance | Color-coded bubbles: <span style="color:#d9534f;">■</span> negative profit vs <span style="color:#5cb85c;">■</span> positive profit |
-| **Filled Map: Profit by State** | Identify geographic hotspots and underperformers | Transitional color scale (red → yellow → green) for intuitive profit gradient |
-
-> 💡 All visuals support cross-filtering: click a category, state, or year to update the entire report context.
+![Superstore Sales and Profit Analysis Dashboard](superstore.png)
 
 ---
 
-## 🔍 Key Business Insights
+## 📌 Project Overview
 
-Analysis of the Superstore dataset reveals three high-impact findings:
+### 🎯 Objective
 
-1. **Sales grew consistently (2017–2020), but profit volatility signals pricing/discount risks**  
-   Sales rose year-over-year, yet profit hit an all-time low in 2018 before recovering and surpassing sales by 2020. This suggests aggressive discounting or cost pressures in specific categories during 2018.
+The primary objective of this project is to analyze **2017–2020 retail sales and profit performance** and uncover the factors influencing profitability.
 
-2. **Category-level profit leakage is concentrated in Furniture and select Sub-Categories**  
-   Drill-downs show that while Furniture drives high sales volume, its profit margin is disproportionately low—often negative when discounts exceed 15%.
+The dashboard focuses on:
 
-3. **Geographic profit disparity: Central & Southern states underperform**  
-   The state map highlights clusters of negative profit in regions like Texas, Ohio, and North Carolina, whereas California and New York remain consistently profitable despite high sales volume.
+- Tracking sales and profit trends over time
+- Comparing sales performance across product categories
+- Identifying products associated with high sales but low or negative profit
+- Examining the relationship between sales, profit, and discount
+- Identifying geographical variations in profitability across U.S. states
+- Highlighting areas, categories, and products requiring further investigation
 
-These insights enable targeted actions: revise discount thresholds for low-margin categories, renegotiate supplier costs for Furniture, and investigate logistics or demand issues in underperforming states.
+The project demonstrates how interactive business intelligence dashboards can transform transactional data into actionable business insights.
 
 ---
 
-## 🚀 How to Use This Dashboard
+## 🗂️ Data Source
 
-### Prerequisites
-- **Microsoft Power BI Desktop** (free download)  
-  → [Download Power BI Desktop](https://powerbi.microsoft.com/desktop/) 
+**Dataset:** Superstore Dataset
 
-### Step-by-Step Instructions
+The Superstore dataset contains retail transaction-level information covering products, categories, sales, profit, discounts, customers, and geographical information.
 
-1. **Clone or download the repository**  
-   ```bash
-   git clone https://github.com/your-username/Product-s-Sales-and-Profit-Analysis-of-Super-store.git
-   ```
-   Or click **Code → Download ZIP** on GitHub and extract the folder.
+The dashboard primarily utilizes fields related to:
 
-2. **Open the .pbix file**  
-   - **Option A (Double-click)**: Navigate to the `.pbix` file and double-click it. Windows will launch Power BI Desktop automatically.
-   - **Option B (From Power BI Desktop)**:  
-     1. Open **Power BI Desktop**  
-     2. Go to **File → Open report → Browse reports**  
-     3. Select `Product-s-Sales-and-Profit-Analysis-of-Super-store.pbix`  
-     4. Click **Open** 
+- Sales
+- Profit
+- Discount
+- Product Category
+- Product Name
+- Year
+- State
 
-3. **Refresh data (if needed)**  
-   If you replace the source Excel file:  
-   - In Power BI Desktop, go to **Home → Transform data → Data source settings**  
-   - Update the file path to your new Excel source  
-   - Click **Refresh** to reload the model
+---
 
-4. **Explore interactively**  
-   Use slicers, cross-filtering, and tooltips to investigate categories, years, and states. 
+## ✨ Key Features & Visualizations
 
+### 1. 🏷️ Sales by Category
 
+A horizontal bar chart compares total sales across the three major product categories:
+
+- **Technology**
+- **Furniture**
+- **Office Supplies**
+
+Technology generates the highest sales, followed by Furniture and Office Supplies.
+
+This visualization provides a quick comparison of category-level revenue contribution.
+
+---
+
+### 2. 📈 Sales and Profit by Year
+
+A dual-axis line chart compares yearly sales and profit from **2017 to 2020**.
+
+It allows users to observe:
+
+- Overall sales growth
+- Year-to-year changes in profitability
+- The relationship between revenue growth and profit generation
+
+The visualization provides an overview of whether increasing sales are accompanied by corresponding improvements in profit.
+
+---
+
+### 3. 🫧 Profit and Discount over Sales
+
+The bubble chart examines the relationship between:
+
+**Sales ↔ Profit ↔ Discount**
+
+Products are visually separated based on profitability:
+
+- 🔵 **Positive Profit**
+- 🟢 **Negative Profit**
+
+The chart makes it easier to identify products that generate substantial sales but produce little or negative profit.
+
+This is particularly useful for investigating whether discounting or other product-level factors may be contributing to poor profitability.
+
+---
+
+### 4. 🗺️ Profit by State
+
+A U.S. map visualizes profitability geographically using transition-based colors.
+
+The map helps identify:
+
+- States generating stronger profits
+- States with relatively poor profitability
+- Geographic concentration of profitable and underperforming markets
+
+Users can also interact with the **State** filter to investigate individual states.
+
+---
+
+### 5. 🎛️ Interactive Filters
+
+The dashboard includes interactive filters that allow users to dynamically explore the data.
+
+Available filters include:
+
+- **Year**
+- **Quarter**
+- **Month**
+- **Day**
+- **Profit Category**
+- **State**
+
+These filters allow users to move from a high-level overview to more specific analyses without leaving the dashboard.
+
+---
+
+## 💡 Key Business Insights
+
+### 📈 1. Sales show a strong overall upward trend
+
+Sales increase substantially over the four-year period.
+
+The dashboard shows sales of approximately:
+
+| Year | Sales |
+|------|------:|
+| 2017 | $0.48M |
+| 2018 | $0.47M |
+| 2019 | $0.61M |
+| 2020 | $0.73M |
+
+Although sales experienced a slight decline in 2018, the overall trend from 2017 to 2020 is strongly positive.
+
+---
+
+### 💰 2. Profit improves steadily after 2017
+
+Profit follows a different pattern from sales.
+
+The dashboard indicates approximately:
+
+| Year | Profit |
+|------|-------:|
+| 2017 | $50K |
+| 2018 | $62K |
+| 2019 | $82K |
+| 2020 | $93K |
+
+Unlike sales, profit does not decline in 2018. Instead, it shows a steady upward trend throughout the period.
+
+This suggests that the business was able to improve profitability even while sales experienced a temporary slowdown in 2018.
+
+---
+
+### ⚠️ 3. High sales do not necessarily translate into high profit
+
+The **Profit and Discount over Sales** visualization highlights an important business problem: some products generate significant sales while producing relatively low or negative profit.
+
+This demonstrates why evaluating sales alone can be misleading.
+
+A product may appear successful based on revenue but may require further investigation when profitability, discounting, and associated costs are considered.
+
+The supplementary product-level visualization helps pinpoint these potentially underperforming products.
+
+---
+
+### 🏆 4. Technology is the leading sales category
+
+Technology records the highest sales among the three major product categories at approximately **$0.84M**, followed by:
+
+- Furniture — approximately **$0.74M**
+- Office Supplies — approximately **$0.72M**
+
+This indicates that Technology is the strongest category in terms of overall sales contribution.
+
+---
+
+### 🌎 5. Profitability varies significantly by geography
+
+The state-level map demonstrates that profitability is not evenly distributed across the United States.
+
+Some states contribute strongly to overall profit, while others show weaker or negative performance.
+
+This geographic variation can help businesses investigate regional pricing, discounting, product mix, and market-specific factors.
+
+---
+
+## 🔎 Business Questions Addressed
+
+This dashboard can be used to answer questions such as:
+
+- Which product category generates the highest sales?
+- How have sales and profit changed from 2017 to 2020?
+- Are increasing sales accompanied by increasing profits?
+- Which products generate high sales but low or negative profit?
+- How does discounting relate to profitability?
+- Which U.S. states generate the highest profits?
+- Which geographical regions require further investigation?
+- Where are sales strong but profitability comparatively weak?
+
+---
+
+## 🛠️ Tools & Technologies
+
+| Tool | Purpose |
+|------|---------|
+| **Microsoft Power BI** | Dashboard development and visualization |
+| **Power Query** | Data preparation and transformation |
+| **DAX** | Calculations and analytical measures |
+| **Superstore Dataset** | Source data |
+| **GitHub** | Project version control and portfolio hosting |
+
+---
+
+## 📁 Repository Structure
+
+```text
+Product-s-Sales-and-Profit-Analysis-of-Super-store/
+│
+├── Product-s-Sales-and-Profit-Analysis-of-Super-store.pbix
+├── superstore.png
+└── README.md
